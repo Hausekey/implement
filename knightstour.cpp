@@ -25,7 +25,6 @@ Given an MxN (M,N<8) chessboard with several blocked cells, figure out if a knig
 
 **/
 
-
 #include <cmath>
 #include <cstdio>
 #include <vector>
@@ -109,10 +108,11 @@ class KnightTour{
 			//should i print answer here or later
 			return true;
 		}
-		else if(cellsLeft == 1){
-			std::cout << "cells left: " << cellsLeft << '\n';
-			displayDebug();
-		}
+		// DEBUG: 
+		// else if(cellsLeft == 1){
+		// 	std::cout << "cells left: " << cellsLeft << '\n';
+		// 	displayDebug();
+		// }
 
 		//check all possible moves to see if it works
 		for(int i = 0; i < 8; i++){
@@ -143,10 +143,6 @@ class KnightTour{
 
 		}
 
-		//if it doesn't work
-		if(sol.size() > 0){
-
-		}
 	    return false;
 
 	}
